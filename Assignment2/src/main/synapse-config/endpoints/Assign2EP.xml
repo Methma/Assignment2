@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint name="Assign2EP" xmlns="http://ws.apache.org/ns/synapse">
+    <address uri="http://10.100.5.165:9763/services/SimpleStockQuoteService/"/>
+</endpoint>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="sampleAS" startOnLoad="true" transports="https http" xmlns="http://ws.apache.org/ns/synapse">
+    <target>
+        <endpoint name="endpoint_urn_uuid_9195a91f-bacf-4149-8086-fb9589f2bb2b">
+            <address uri="https://10.100.5.165:9443/services/SimpleStockQuoteService/"/>
+        </endpoint>
+        <inSequence>
+            <log description="LogIn"/>
+        </inSequence>
+        <outSequence>
+            <log description="logOut"/>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </target>
+    <publishWSDL uri="http://localhost:9000/services/SimpleStockQuoteService?wsdl">
+        <resource key="meth" location="colombo"/>
+    </publishWSDL>
+    <policy key="/regResourceNew2/registryRes2.xml"/>
+    <enableSec/>
+</proxy>
